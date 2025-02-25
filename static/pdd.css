@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+
+    
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #212020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#loader h3 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    color: #4CAF50;
+}
+
+#main {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#page1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#page1-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+#page1-content h1 {
+    font-size: 8rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#page1-content h1 span {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+#page2, #page3, #page3after, #page5, #page6, #page7 {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#page2 h1, #page3last h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#page3-elements {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+
+.box {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+
+.box img, .box video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.box:hover img, .box:hover video {
+    transform: scale(1.1);
+}
+
+#page5-top h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#page7-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#page7-content h1 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+#page7-content h1 span {
+    margin: 0 0.5rem;
+}
+
+#cursor img {
+    width: 50px;  /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+}
+#page2 {
+    /* color:black; */
+    background-color: rgb(211, 241, 213);
+    
+}
+
+
+.box {
+    position: relative;
+    width: 100%;
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+#page3{
+    margin-top: 5%;
+    min-height:100vh; 
+    width:100%;
+    position:relative;
+}
+#page3-top{
+    /* background-color: red; */
+    text-align: center;
+}
+#page3-top h4{
+    margin-bottom:1.2vw;
+    font-size:1.4vw;
+    font-weight:500;
+}
+#page3-top h4 span{
+    font-size:0.9vw;
+    background-color: #000;
+    color:rgb(188, 143, 143);
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+#page3-top h2{
+    font-size:4vw;
+    font-weight: 500;
+}
+#page3-elements{
+    height:75vh;
+    width:100%;
+    /* background-color: red; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8vw;
+}
+#page3-elements .box{
+    height:auto;
+    width:100%;
+    /* background-color: blue; */
+    text-align: center; 
+    position:relative;
+    box-shadow: #850606;
+}
+#page3-elements .box video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+#page3-elements .box img{
+    position: absolute;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    transition:all linear 0.8s;
+}
+#page3-elements .box:hover img{
+    opacity:0;
+}
+#page3after{
+    margin-top:5%;
+    width:100%;
+    
+}
+#page3top{
+    border-bottom: 1px solid #000000;
+}
+
+
+/* //for output result */
+.container {
+    text-align: center; /* Center all content */
+    max-width: 90%; /* Adjust based on your layout */
+    margin: auto;
+}
+
+#preview {
+    display: none;
+    width: 100%; /* Make the image fill the container width */
+    max-width: 800px; /* Set a max width if needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image with spacing */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Soft shadow */
+}
