@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection | GreenHealth</title>
+    <link rel="shortcut icon" href="https://example.com/favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="pdd.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pdd.css') }}">
+</head>
+<body>
+    <div id="loader">
+        <h3>Detecting</h3>
+        <h3>Plant Health</h3>
+        <h3>Today</h3>
+    </div>
+    <div id="main">
+        <!-- Page 1: Hero Section -->
+        <div id="page1">
+            <div id="cursor">
+                <!-- <h5>Upload Image</h5> -->
+            </div>
+            <!--<video autoplay loop muted src="./images/first.mp4"></video>-->
+            <video >
+                <source src="{{ url_for('static', filename='images/first.mp4') }}" type="video/mp4">
+            </video>
+            <div id="page1-content">
+                <nav>
+                    <!-- <h3>GreenHealth</h3> -->
+                    <h4></h4>
+                </nav>
+                <h1>
+                    <span>P</span>
+                    <span>l</span>
+                    <span>a</span>
+                    <span>n</span>
+                    <span>t</span>
+                    <span> </span>
+                    <span>H</span>
+                    <span>e</span>
+                    <span>a</span>
+                    <span>l</span>
+                    <span>t</span>
+                    <span>h</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Page 2: About Section -->
+        <div id="page2">
+            <div class="ele">
+                <h4>Detect. Analyze. Heal.<br>
+                Advanced AI for Plant Health</h4>
+                <h4>Global Support</h4>
+            </div>
+            <div id="page2-content">
+                <h1>We use cutting-edge AI to detect plant diseases early and provide actionable insights to farmers and gardeners. Our mission is to ensure healthy crops and sustainable agriculture.</h1>
+            </div>
+        </div>
+
+        <!-- Page 3: Services Section -->
+
+
+        <!-- <div id="page3">
+            <div id="page3-top">
+                <h4>Our <span>Services</span></h4>
+                <h2><u>Explore Our Tools</u></h2>
+                <h2><u>& Solutions</u></h2>
+            </div>
+            <div id="page3-elements">
+                <div class="box">
+                    <div>
+                    <img src="" alt="Leaf Analysis">
+                    <video autoplay loop muted src=""></video>
+                    </div>
+                </div>
+                
+
+                <div class="box">
+                    <img src="leaf2.jpg" alt="Disease Detection">
+                    <video autoplay loop muted src="disease-detection.mp4"></video>
+                </div>
+                <div class="box">
+                    <img src="leaf3.jpg" alt="Soil Health">
+                    <video autoplay loop muted src="soil-health.mp4"></video>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="page3">
+            <div id="page3-top">
+                <!-- <h4>Agency & Venture<span>Models</span></h4> -->
+                <h2><u>Explore Our Services</u></h2>
+                
+        </div>
+        <div id="page3-elements">
+            <div class="box">
+                
+                <!-- <img src="./images/thumbnail.jpg" alt="Leaf Analysis"> -->
+                <img src="{{ url_for('static', filename='images/thumbnail.jpg') }}" alt="Leaf Analysis">
+                <!-- <video autoplay loop muted src="./images/video.mp4"></video> -->
+                <!-- <video controls>
+                    <source src="{{ url_for('static', filename='images/video.mp4') }}" type="video/mp4">
+                </video> -->
+            </div>
+            <!-- <div class="box">
+                <img src="img2_1.jpg" alt="">
+                <video autoplay loop muted src="v2.mp4"></video>
+            </div>
+            <div class="box">
+                <img src="img3.jpg" alt="">
+                <video autoplay loop muted src="v3.mp4"></video>
+            </div>
+        </div> -->
+
+        </div>
+        <!-- <div id="page3after">
+            <div id="page3top">
+                <h4>We operate on a simple philosophy:<br>
+                Quality over quantity</h4>
+            </div>
+            <div id="page3last">
+                <h1>Data matters, yet it's the emotion that
+                    drives buying decisions. We don't believe 
+                    in 'one size fits all.' Instead, we collaborate
+                    closely with our clients to craft unique brand 
+                    experiences that deeply resonate with their 
+                    audiences and boost their KPIs. 90% come 
+                    back for a second project."</h1>
+            </div>
+        </div> -->
+
+        <div id="page3afterr">
+            <div id="page3topp">
+                <!-- <div class="container">
+                    <h1>Plant Disease Classifier 🌱</h1>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <button onclick="uploadImage()">Predict</button>
+                    <p id="result"></p>
+                    <img id="preview" style="display:none;">
+                </div> -->
+
+                <div class="container">
+                    <h1>Plant Disease Classifier 🌱</h1>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <button onclick="uploadImage()">Predict</button>
+                    <p id="result"></p>
+                    <div class="image-container">
+                        <img id="preview">
+                    </div>
+                </div>
+                
+            
+                <!-- <script src="/static/script.js"></script> -->
+                <script src="{{ url_for('static', filename='script.js') }}"></script>
+            </div>   
+        </div>
+
+        
+        
+
+
+        <!-- Page 4: Philosophy Section -->
+        <div id="page3after">
+            <div id="page3top">
+                <h4>Our Philosophy:<br>
+                Healthy Plants, Healthy Planet</h4>
+            </div>
+            <div id="page3last">
+                <h1>We believe in leveraging technology to create a sustainable future. By detecting plant diseases early, we help farmers reduce crop loss and improve yields. Join us in our mission to protect the planet.</h1>
+            </div>
+        </div>
+
+        <!-- Page 5: Get Started Section -->
+        <div id="page5">
+            <div id="page5-top">
+                <h1>Get Started.</h1>
+                <div id="swiperdiv">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- <img src="./images/Plant1.jpeg" alt="Plant 1">
+                                <img src="./images/Plant2.PNG" alt="Plant 2">
+                                <img src="./images/Plant3.PNG" alt="Plant 3">
+                                <img src="./images/Plant5.webp" alt="Plant 4"> -->
+                                <img src="{{ url_for('static', filename='images/Plant1.jpeg') }}" alt="Plant 1">
+<img src="{{ url_for('static', filename='images/Plant2.PNG') }}" alt="Plant 2">
+<img src="{{ url_for('static', filename='images/Plant3.PNG') }}" alt="Plant 3">
+<img src="{{ url_for('static', filename='images/Plant4.PNG') }}" alt="Plant 5">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- <img src="plant6.jpg" alt="Plant 6">
+                                <img src="plant7.jpg" alt="Plant 7">
+                                <img src="plant8.jpg" alt="Plant 8">
+                                <img src="plant9.jpg" alt="Plant 9">
+                                <img src="plant10.jpg" alt="Plant 10"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6: About Us Section -->
+        <div id="page6">
+            <div id="page6-content">
+                <h4>We're here to help ↵</h4>
+                <h2><u>About Us</u></h2>
+            </div>
+        </div>
+
+        <!-- Page 7: Footer Section -->
+        <div id="page7">
+            <div id="page7-content">
+                <nav>
+                    <h5>Join the Green Revolution.<br><br>
+                    <button>Upload Image</button></h5>
+                    <h5>
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </h5>
+                    <h5>
+                        <ul>
+                            <li>Twitter→</li>
+                            <li>Instagram→</li>
+                            <li>LinkedIn→</li>
+                        </ul>
+                    </h5>
+                </nav>
+                <section>
+                    <h5>Global Support<br>
+                    Email: support@greenhealth.com</h5>
+                    <h5>©2023 GreenHealth</h5>
+                </section>
+                <h1>
+                    <span>G</span>
+                    <span>r</span>
+                    <span>e</span>
+                    <span>e</span>
+                    <span>n</span>
+                    <span>H</span>
+                    <span>e</span>
+                    <span>a</span>
+                    <span>l</span>
+                    <span>t</span>
+                    <span>h</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="/static/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--<script src="pdd.js"></script>-->
+    <script src="{{ url_for('static', filename='js/pdd.js') }}"></script>
+</body>
+</html>
+
+
+
